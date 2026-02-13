@@ -1,13 +1,13 @@
 const CACHE_NAME = 'gemstone-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/gem.html',
-  '/style.css',
-  '/app.js',
-  '/gem.js',
-  '/gemstones-data.js',
-  '/luster-data.js'
+  '/gemstone-guide/',
+  '/gemstone-guide/index.html',
+  '/gemstone-guide/gem.html',
+  '/gemstone-guide/style.css',
+  '/gemstone-guide/app.js',
+  '/gemstone-guide/gem.js',
+  '/gemstone-guide/gemstones-data.js',
+  '/gemstone-guide/luster-data.js'
 ];
 
 self.addEventListener('install', event => {
