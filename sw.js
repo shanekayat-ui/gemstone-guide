@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gemstone-v1';
+const CACHE_NAME = 'gemstone-v2';
 const urlsToCache = [
   '/gemstone-guide/',
   '/gemstone-guide/index.html',
@@ -22,4 +22,5 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => response || fetch(event.request))
   );
+
 });
