@@ -20,9 +20,28 @@ document.addEventListener('DOMContentLoaded', function() {
     <img src="${currentGem.image_url}" class="mx-auto my-3"></img>
     <div id="gemInfo" class="row m-2">
         <div id="gem-color" class="fs-5 my-1"><strong>Color: </strong>${currentGem.color}</div>
-        <div id="hardness" class="fs-5 my-1"><strong>Hardness: </strong>${currentGem.hardness}</div>
-        <div id="luster" class="fs-5 my-1">
-            <strong>Luster: </strong>
+        
+        <!-- Hardness Scale -->
+        <div id="hardness-scale" class="fs-5 my-3">
+            <strong>Hardness: </strong>${currentGem.hardness} / 10 (Mohs Scale)
+            <div class="hardness-slider-container mt-2">
+                <input type="range" class="form-range hardness-slider" min="1" max="10" step="0.5" value="${currentGem.hardness}" disabled>
+                <div class="hardness-labels d-flex justify-content-between">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="luster" class="fs-5 my-1"><strong>Luster: </strong>
             <a href="#" class="text-decoration-none" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="${lusterData.description}">${currentGem.luster}</a>
             <i class="bi bi-info-circle"></i>
         </div>
@@ -31,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div id="zodiac" class="fs-5 my-1"><strong>Zodiac: </strong>${currentGem.zodiac}</div>
         <div id="spiritual" class="fs-5 my-1"><strong>Spiritual properties:</strong> ${currentGem.spiritual_properties}</div>
         <div id="healing" class="fs-5 my-1"><strong>Healing: </strong>${currentGem.physical_healing}</div>
-        <div id="trivia" class="fs-5 my-1"><strong>Trivia: </strong>${currentGem.trivia}</div>
+        <div id="trivia" class="fs-1 my-3 text-center">${currentGem.trivia}</div>
     </div>    
 </div>
 `;
